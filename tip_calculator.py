@@ -31,11 +31,12 @@ number_party = int (input('How many people are in our party'))
 #What input will be asked on tip amount, as A Float
 tip_percentage = float (input('How much will the tip percentage be'))
 
-bill_tip = round(amount_bill * (bill_tip/ 100),2)
+bill_tip = round(amount_bill * (tip_percentage/ 100),2)
 bill_tax = round(amount_bill * .1,2)
 bill_total = round(amount_bill + bill_tip + bill_tax,2) 
 individual_bill = round(bill_total / number_party,2)
 
-
+print(f'the tip is {bill_tip}')
 print(f'the total bill {bill_total}')
 print(f'the individual bill {individual_bill}')
+print(f'bill tax {bill_tax}')
